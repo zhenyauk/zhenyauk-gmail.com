@@ -1,0 +1,12 @@
+.user-login-form{
+  width:355px;
+  margin:200px auto;
+
+}
+
+.user-login-form #edit-name, .user-login-form #edit-pass{
+  width:350px;
+}
+.user-login-form #edit-pass{
+margin-left:5px;
+}

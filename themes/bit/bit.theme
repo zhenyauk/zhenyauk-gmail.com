@@ -1,0 +1,36 @@
+<?php
+
+
+
+
+function bit_preprocess_html(&$variables){
+
+  //$language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  //$variables['langg'] = $language;
+
+}
+
+
+function bit_preprocess_node(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
+}
+
+function bit_theme_suggestions_page_alter(array &$suggestions, array &$variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+
+  }
+}
+
+
+
+
+function bit_preprocess_block(&$variables) {
+   $ids = $variables['attributes']['data-quickedit-entity-id'];
+   $ids = explode('/', $ids);
+   $variables['href'] = $ids[1];
+
+}

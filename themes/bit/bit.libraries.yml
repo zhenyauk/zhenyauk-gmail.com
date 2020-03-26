@@ -1,0 +1,7 @@
+bit-style:
+  css:
+    theme:
+      static/css/styles.css: {}
+  js:
+    static/js/libs.min.js: {}
+    static/js/fron-page.min.js: {}

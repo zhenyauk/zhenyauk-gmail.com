@@ -1,0 +1,26 @@
+name: Bit
+type: theme
+description: Theme for bitPayer site
+core: 8.x
+
+regions:
+  top_btns: Top buttons
+  top_navigation: Top Navigation
+  baner: Baner
+  front_page: Main page content
+  feedbacks_title: Feedbacks title
+  feedbacks: Feedbacks
+  page_title: Page Title
+  content_block: Content Block
+  content: Content
+  page_bottom: Page Bottom
+  sidebar_first: Sidebar Frist
+  footer: Footer
+  footer_mnu_1: Footer Menu 1
+  footer_mnu_2: Footer Menu 2
+  footer_mnu_3: Footer Menu 3
+  footer_mnu_4: Footer Menu 4
+  page_article_baner: Page Article's Baner
+  footer_mnu_5: Footer Icons with logos
+  disabled_area: Disabled
+

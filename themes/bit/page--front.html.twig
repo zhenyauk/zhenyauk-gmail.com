@@ -1,0 +1,52 @@
+<div class="page"  >
+
+  {{ include('/themes/bit/header.html') }}
+
+
+
+
+
+<main class="front-page content">
+
+       {{ page.front_page }}
+
+
+
+       <section class="feedback">
+          <div class="container">
+            <h2 class="front-page__h2 feedback__title">{{page.feedbacks_title}}</h2>
+            <div class="container">
+            <div class="feedback-slider">
+              <svg class="icon icon-slide-arrow feedback-slider__arrow feedback-slider__arrow--prev">
+                <use xlink:href="/themes/bit/images/svg/sprite.svg#slide-arrow"></use>
+              </svg>
+              <div class="swiper-container feedback-slider__container">
+                <div class="swiper-wrapper feedback-slider__wrapper">
+
+              {{ page.feedbacks }}
+
+                </div>
+                <svg  class="icon icon-slide-arrow icon-slide-arrow--next feedback-slider__arrow feedback-slider__arrow--next">
+                <use xlink:href="/themes/bit/images/svg/sprite.svg#slide-arrow"></use>
+              </svg>
+
+              </div>
+
+            </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+{{ include('/themes/bit/footer.html') }}

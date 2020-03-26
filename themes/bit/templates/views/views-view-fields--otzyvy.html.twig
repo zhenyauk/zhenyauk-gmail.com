@@ -1,0 +1,37 @@
+<div class="swiper-slide feedback-slider__slide" >
+    <img class="feedback__avatar" src="/themes/bit/images/general/user-avatar.jpg" alt="">
+    <div class="feedback__content">
+        <p class="feedback__text">
+
+
+            {{ fields.body.content }}
+
+
+        </p>
+        <p class="feedback__name">{{ fields.title.content }}</p>
+
+        <div class="feedback__rating">
+
+            {% if fields.field_stars.content|length == 234 %}
+              {% set a = 5 %}
+            {% elseif fields.field_stars.content|length == 233 %}
+              {% set a = 4 %}
+            {%  elseif fields.field_stars.content|length == 232 %}
+              {% set a =3 %}
+            {% elseif fields.field_stars.content|length == 231 %}
+              {% set a =2 %}
+            {% elseif fields.field_stars.content|length == 230 %}
+              {% set a =1 %}
+            {% endif %}
+
+           {% for i in 1..a %}
+
+            <svg class="icon icon-star feedback__icon">
+                <use xlink:href="/themes/bit/images/svg/sprite.svg#star"></use>
+            </svg>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>

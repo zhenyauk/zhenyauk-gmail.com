@@ -1,0 +1,66 @@
+
+       <section class="front content-front" style="background:url(/themes/bit/images/content/category/category-bg.jpg);">
+          <div class="container">
+            <!-- <h1 class="content__heading">{{title}}</h1> -->
+            <h1 class="content__heading">Buy Bitcoin (BTC) <span class="new-line">with bitFlyer</span></h1>
+            <div class="front__wrap">
+            <a class="btn__blue front__btn" href="#">Sign up for free</a>
+            <a class="btn__blue--light front__btn" href="#">Log in</a></div>
+          </div>
+        </section>
+
+
+    <div>
+
+
+
+     </div>
+
+<section class="category-about">
+          <div class="container">
+            <div class="tabs tabs--grid category-about-tabs">
+              <div class="tabs__nav category-about-tabs__nav">
+              {% for tax in items %}
+                <div class="tabs__btn-wrap"><a class="tabs__btn tabs__btn--full btn__default {% if term.title == tax.name %} act {% endif %} " href="/blog/{{tax.id}}">{{ tax.name }}</a></div>
+              {% endfor %}
+
+
+              </div>
+              <div class="tabs__content">
+                <div class="info-block">
+                  {{term.description|raw}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+   <section class="post">
+          <div class="container">
+
+            {% for article in articles %}
+      <div class="post__item">
+        {% set img = "/themes/bit/images/content/post/post-1.jpg" %}
+
+        {% if  images[loop.index - 1].getFileUri() != null %}
+           {% set img = file_url(images[loop.index - 1].getFileUri() )%}
+        {% endif %}
+
+      <img class="post__img" src="{{img}}" alt="">
+              <div class="post__content"><span class="post__date">20.02.2020</span>
+                <h3 class="post__title">  {{article['title'][0]['value']}}</h3>
+                <div class="post__text"><span>
+                 {{article['body'][0]['value']|raw}}</span>
+                </div>
+                <a class="post__link" href="/node/{{article['nid'][0]['value']}}">Read more</a>
+              </div>
+            </div>
+            {% endfor %}
+
+
+          </div>
+        </section>
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+<!-- Pages-->
+<!-- Static links--><!DOCTYPE html>
+<html {{ html_attributes }} lang="ru">
+  <head>
+  <head-placeholder token="{{ placeholder_token|raw }}">
+    <meta charset="utf-8">
+    <title>{{ head_title|safe_join(' | ') }}</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+    <link rel="stylesheet" type="text/css" href="/{{ directory }}/css/styles.min.css?v=1584448964"><!--[if lt IE 9]>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+ <link rel="stylesheet" type="text/css" href="/{{ directory }}/css/fix.css">
+    <meta name="keywords" content="">
+
+  </head>
+
+  <body{{ attributes }}>
+    {#
+      Keyboard navigation/accessibility link to main content section in
+      page.html.twig.
+    #}
+    <a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+
+    <script src="/{{directory}}/js/libs.min.js?v=1584448964"></script>
+    <script src="/{{directory}}/js/front-page.min.js?v=1584448964"></script>
+  </body>
+</html>

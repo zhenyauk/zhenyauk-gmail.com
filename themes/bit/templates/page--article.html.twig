@@ -1,0 +1,45 @@
+<div class="page"  >
+
+  {{ include('/themes/bit/header.html') }}
+
+
+{% if node.field_show_baner_for_page_.value|escape == "defaultt" %}
+    <main class="content content" >
+  {{page.page_article_baner}}
+
+{% elseif node.field_show_baner_for_page_.value|escape == "yess" %}
+
+<section class="front category-front"
+style="background:url({{ file_url(node.field_mainbaner.entity.fileuri) }});">
+        <div class="container">
+
+            <h1 class="heading">{{ node.field_bnaner_s_text.value }}</span></h1>
+            <div class="front__wrap">
+            {{ node.field_field_custom_block.value|raw }}
+            </div>
+          </div>
+</section>
+
+{% else %}
+  <main class="content content" style="margin:200px auto; width:90%;">
+
+<h1 class="heading">{{ node.label }}</span></h1>
+
+{% endif %}
+
+
+         <div class="post-content" >
+          <div style="margin:0 auto; max-width:90%;">
+          <h2>{{ node.label }}</h2>
+            {{page.content}}
+            </div>
+         </div>
+
+
+
+  </main>
+
+
+
+
+{{ include('/themes/bit/footer.html') }}

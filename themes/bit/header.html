@@ -1,0 +1,29 @@
+<header class="header" {% if is_admin %} style="margin-top:60px" {% endif %}>
+        <div class="container"><a class="logo header__logo" href="/"><img class="logo__img" src="/{{directory}}/images/general/logo-dark.svg" alt="bitFlyer Logo"></a>
+          <div class="header__content">
+            <!-- BUTTONS TOP -->
+            {{ page.top_btns }}
+
+            <div class="lang header-lang">
+              <svg class="icon icon-lang lang__icon">
+                <use xlink:href="/{{directory}}/images/svg/sprite.svg#lang"></use>
+              </svg>
+              <button class="lang__btn js-langBtn" type="button">
+                <span class="lang__current">
+                  {% if language %}
+                    {{ language.id|upper  }}
+                  {% endif %}
+              </span>
+                <svg class="icon icon-arrow lang__arrow">
+                  <use xlink:href="/{{directory}}/images/svg/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="lang-list header-lang__list">
+                <a onclick="event.stopPropagation();" class="lang-list__item" href="/">EN</a>
+                <a onclick="event.stopPropagation(); " class="lang-list__item" href="de">DE</a>
+                <a onclick="window.open('/es')" class="lang-list__item" href="/es">DT</a></div>
+            </div>
+          </div>
+          <button class="hamburger" type="button"><span class="hamburger__btn"></span></button>
+        </div>
+  </header>

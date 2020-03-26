@@ -1,0 +1,23 @@
+drupalup_controller.article_list:
+  path: '/blog'
+  defaults:
+    _controller: '\Drupal\drupalup_controller\Controller\ArticleController::pages'
+    _title: 'Catalog'
+    _mpage: 'My page'
+  requirements:
+    _permission: 'access content'
+
+drupalup_controller.article_lists:
+  path: '/blog/{page}'
+  defaults:
+    _controller: '\Drupal\drupalup_controller\Controller\ArticleController::page'
+    _title: 'All pages'
+    _some: 'all'
+    _mpage: 'My page'
+  requirements:
+    _permission: 'access content'
+
+
+
+
+
